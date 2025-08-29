@@ -23,25 +23,21 @@ Built with **JavaScript, HTML, CSS, Node.js, Express, SQLite**.
 ---
 ## ⚡ Quick Start  
 
-```bash
-# 1) Clone the repo
-git clone https://github.com/<your-username>/website-error-tracker.git
-cd website-error-tracker
 
-# 2) Install dependencies
-npm install
+## 1) Clone the repo
+`git clone https://github.com/<username>/website-error-tracker.git
+cd website-error-tracker`
 
-# 3) (Optional) Configure
-echo "PORT=3000\nSCAN_TIMEOUT_MS=10000" > .env
+## 2) Install dependencies
+`npm install`
 
-# 4) Run in dev mode
-npm run dev
+## 3) Configure
+`echo "PORT=3000\nSCAN_TIMEOUT_MS=10000" > .env`
 
-http://localhost:3000
+## 4) Run in dev mode
+`npm run dev`
 
-| Method | Endpoint        | Description                |
-| ------ | --------------- | -------------------------- |
-| POST   | `/api/scan`     | Scan a website `{ url }`   |
-| GET    | `/api/history`  | Recent scans (limit=20)    |
-| GET    | `/api/scan/:id` | Details of a specific scan |
+## 5) Final
+`http://localhost:3000`
 
+```
