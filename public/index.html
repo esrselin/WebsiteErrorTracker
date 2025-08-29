@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Website Error Tracker</title>
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<main class="container">
+<h1>Website Error Tracker</h1>
+
+
+<form id="scan-form" class="card">
+<label for="url">Enter URL</label>
+<input id="url" type="url" placeholder="https://example.com" required />
+<button type="submit">Scan</button>
+<small class="hint">We fetch the page server-side and sample up to 20 links/assets.</small>
+</form>
+
+
+<section class="grid">
+<div class="card">
+<h2>Latest Scan</h2>
+<pre id="latest">—</pre>
+</div>
+<div class="card">
+<h2>History</h2>
+<table id="history"></table>
+</div>
+</section>
+</main>
+
+
+<script src="/app.js" defer></script>
+</body>
+</html>
