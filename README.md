@@ -1,49 +1,47 @@
-# Website Error Tracker
-A tiny Node.js + React-less (vanilla JS) app that scans a URL, records the HTTP status, response time, and samples up to 20 links/assets to flag potential issues. Stores history in SQLite.
+# 🌐 Website Error Tracker  
+
+*A lightweight Website Error Tracker using JavaScript, HTML, CSS, and Node.js to detect and log partner website issues (HTTP errors, broken links, slow responses). Implemented SQLite for scan history and status tracking.*
+Built with **JavaScript, HTML, CSS, Node.js, Express, SQLite**.  
 
 
-## Tech
-- Frontend: JavaScript, HTML, CSS (no framework to keep it small)
-- Backend: Node.js, Express
-- Database: SQLite (SQL skills ✅)
-- Parsing: Cheerio
+## 🚀 Features  
+-  Scan any website URL and check its **HTTP status**  
+-  Measure **response time** in milliseconds  
+-  Detect **broken links** (404/500 errors) and failed assets (JS, CSS, images)  
+-  Save results to a **SQLite database** for history tracking  
+-  View scan history and details via REST API or simple dashboard  
+-  Built with **vanilla JS frontend** (fast, no heavy framework)  
 
+---
 
-## Quick Start
+## 🛠️ Tech Stack  
+- **Frontend**: HTML, CSS, JavaScript  
+- **Backend**: Node.js, Express  
+- **Database**: SQLite  
+- **Parsing**: Cheerio  
+
+---
+## ⚡ Quick Start  
+
 ```bash
-# 1) Clone
+# 1) Clone the repo
 git clone https://github.com/<your-username>/website-error-tracker.git
 cd website-error-tracker
 
-
-# 2) Install deps
+# 2) Install dependencies
 npm install
 
-
 # 3) (Optional) Configure
-# echo "PORT=3000\nSCAN_TIMEOUT_MS=10000" > .env
+echo "PORT=3000\nSCAN_TIMEOUT_MS=10000" > .env
 
-
-# 4) Run
+# 4) Run in dev mode
 npm run dev
-# open http://localhost:3000
 
-Endpoints
+http://localhost:3000
 
-POST /api/scan { url } → triggers a scan
+| Method | Endpoint        | Description                |
+| ------ | --------------- | -------------------------- |
+| POST   | `/api/scan`     | Scan a website `{ url }`   |
+| GET    | `/api/history`  | Recent scans (limit=20)    |
+| GET    | `/api/scan/:id` | Details of a specific scan |
 
-GET /api/history?limit=20 → recent scans
-
-GET /api/scan/:id → scan + details JSON
-
-Notes
-
-For speed, we check a small sample of links/assets (config in server.js).
-
-Some servers block HEAD; we fallback to GET.
-
-This is a learning/demo tool, not a full crawler.
-
-CV Snippet
-
-Developed a lightweight Website Error Tracker using JavaScript, HTML, CSS, and Node.js to detect and log partner website issues (HTTP errors, broken links, slow responses). Implemented SQLite for scan history and status tracking.
