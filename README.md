@@ -25,7 +25,7 @@ Built with **JavaScript, HTML, CSS, Node.js, Express, SQLite**.
 
 
 ## 1) Clone the repo
-```git clone https://github.com/<username>/website-error-tracker.git
+```git clone https://github.com/<username>/website-error-tracker.git```
 cd website-error-tracker```
 
 ## 2) Install dependencies
